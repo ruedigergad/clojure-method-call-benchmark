@@ -166,7 +166,8 @@
 (deftest if-condp-benchmark-0
   (println "\nRunning: if-condp-benchmark-0")
   (let [f (fn [arg]
-            (if (keyword? arg)
+            (if (not (keyword? arg))
+              (str arg)
               (condp = arg
                 :foo_0 0
                 :foo_1 1
@@ -207,8 +208,7 @@
                 :foo_36 36
                 :foo_37 37
                 :foo_38 38
-                :foo_39 39)
-              (str arg)))]
+                :foo_39 39)))]
     (cc/with-progress-reporting
       (cc/quick-bench
         (f "bar")
