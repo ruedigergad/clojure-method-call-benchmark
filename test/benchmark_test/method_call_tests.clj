@@ -15,7 +15,6 @@
   (println "\nRunning: condp-benchmark-0")
   (let [f (fn [arg]
             (condp = arg
-              :foo_0 0
               (str arg)))]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -24,6 +23,17 @@
 
 (deftest condp-benchmark-1
   (println "\nRunning: condp-benchmark-1")
+  (let [f (fn [arg]
+            (condp = arg
+              :foo_0 0
+              (str arg)))]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (f "bar")
+        :verbose))))
+
+(deftest condp-benchmark-2
+  (println "\nRunning: condp-benchmark-2")
   (let [f (fn [arg]
             (condp = arg
               :foo_0 0
@@ -42,8 +52,8 @@
         (f "bar")
         :verbose))))
 
-(deftest condp-benchmark-2
-  (println "\nRunning: condp-benchmark-2")
+(deftest condp-benchmark-3
+  (println "\nRunning: condp-benchmark-3")
   (let [f (fn [arg]
             (condp = arg
               :foo_0 0
@@ -72,8 +82,8 @@
         (f "bar")
         :verbose))))
 
-(deftest condp-benchmark-3
-  (println "\nRunning: condp-benchmark-3")
+(deftest condp-benchmark-4
+  (println "\nRunning: condp-benchmark-4")
   (let [f (fn [arg]
             (condp = arg
               :foo_0 0
@@ -112,8 +122,8 @@
         (f "bar")
         :verbose))))
 
-(deftest condp-benchmark-4
-  (println "\nRunning: condp-benchmark-4")
+(deftest condp-benchmark-5
+  (println "\nRunning: condp-benchmark-5")
   (let [f (fn [arg]
             (condp = arg
               :foo_0 0
@@ -215,8 +225,7 @@
 
 (deftest map-benchmark-0
   (println "\nRunning: map-benchmark-0")
-  (let [m {:foo_0 0
-           :bar (fn [arg] (str arg))}]
+  (let [m {:bar (fn [arg] (str arg))}]
     (cc/with-progress-reporting
       (cc/quick-bench
         ((m :bar) "bar")
@@ -224,6 +233,15 @@
 
 (deftest map-benchmark-1
   (println "\nRunning: map-benchmark-1")
+  (let [m {:foo_0 0
+           :bar (fn [arg] (str arg))}]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        ((m :bar) "bar")
+        :verbose))))
+
+(deftest map-benchmark-2
+  (println "\nRunning: map-benchmark-2")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -240,8 +258,8 @@
         ((m :bar) "bar")
         :verbose))))
 
-(deftest map-benchmark-2
-  (println "\nRunning: map-benchmark-2")
+(deftest map-benchmark-3
+  (println "\nRunning: map-benchmark-3")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -268,8 +286,8 @@
         ((m :bar) "bar")
         :verbose))))
 
-(deftest map-benchmark-3
-  (println "\nRunning: map-benchmark-3")
+(deftest map-benchmark-4
+  (println "\nRunning: map-benchmark-4")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -306,8 +324,8 @@
         ((m :bar) "bar")
         :verbose))))
 
-(deftest map-benchmark-4
-  (println "\nRunning: map-benchmark-4")
+(deftest map-benchmark-5
+  (println "\nRunning: map-benchmark-5")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -405,8 +423,7 @@
 
 (deftest map-rev-benchmark-0
   (println "\nRunning: map-rev-benchmark-0")
-  (let [m {:foo_0 0
-           :bar (fn [arg] (str arg))}]
+  (let [m {:bar (fn [arg] (str arg))}]
     (cc/with-progress-reporting
       (cc/quick-bench
         ((:bar m) "bar")
@@ -414,6 +431,15 @@
 
 (deftest map-rev-benchmark-1
   (println "\nRunning: map-rev-benchmark-1")
+  (let [m {:foo_0 0
+           :bar (fn [arg] (str arg))}]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        ((:bar m) "bar")
+        :verbose))))
+
+(deftest map-rev-benchmark-2
+  (println "\nRunning: map-rev-benchmark-2")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -430,8 +456,8 @@
         ((:bar m) "bar")
         :verbose))))
 
-(deftest map-rev-benchmark-2
-  (println "\nRunning: map-rev-benchmark-2")
+(deftest map-rev-benchmark-3
+  (println "\nRunning: map-rev-benchmark-3")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -458,8 +484,8 @@
         ((:bar m) "bar")
         :verbose))))
 
-(deftest map-rev-benchmark-3
-  (println "\nRunning: map-rev-benchmark-3")
+(deftest map-rev-benchmark-4
+  (println "\nRunning: map-rev-benchmark-4")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -496,8 +522,8 @@
         ((:bar m) "bar")
         :verbose))))
 
-(deftest map-rev-benchmark-4
-  (println "\nRunning: map-rev-benchmark-4")
+(deftest map-rev-benchmark-5
+  (println "\nRunning: map-rev-benchmark-5")
   (let [m {:foo_0 0
            :foo_1 1
            :foo_2 2
@@ -575,10 +601,4 @@
       (cc/quick-bench
         (.bar t "bar")
         :verbose))))
-
-;(deftest benchmark-1
-;  (cc/report-result
-;    (cc/quick-benchmark
-;      (Thread/sleep 10)
-;      {:verbose true})))
 
