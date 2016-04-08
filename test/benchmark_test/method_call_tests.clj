@@ -1,7 +1,6 @@
 (ns benchmark-test.method-call-tests
   (:require [clojure.test :refer :all]
-            [criterium [core :as cc]]
-            [benchmark-test.core :refer :all]))
+            [criterium [core :as cc]]))
 
 (deftest fn-baseline-0
   (println "\nRunning: fn-baseline-0")
@@ -543,6 +542,38 @@
     (cc/with-progress-reporting
       (cc/quick-bench
         ((:bar m) "bar")
+        :verbose))))
+
+(defprotocol MyProt
+  (foo [_])
+  (bar [_ arg]))
+
+(defrecord MyRec
+  []
+  MyProt
+  (foo [_] 0)
+  (bar [_ arg] (str arg)))
+
+(deftest defrecord-benchmark-0
+  (println "\nRunning: defrecord-benchmark-0")
+  (let [r (MyRec.)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (.bar r "bar")
+        :verbose))))
+
+(deftype MyType
+  []
+  MyProt
+  (foo [_] 0)
+  (bar [_ arg] (str arg)))
+
+(deftest deftype-benchmark-0
+  (println "\nRunning: deftype-benchmark-0")
+  (let [t (MyType.)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (.bar t "bar")
         :verbose))))
 
 ;(deftest benchmark-1
