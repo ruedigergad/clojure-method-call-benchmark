@@ -121,3 +121,31 @@ user> (this-is-oo "a")
 
 
 
+
+(defn create-resource
+  [...]
+  (let [resource (...)]
+    (fn [arg]
+      (condp =
+        :close (.close resource)
+        ...
+        (.process resource arg)))))
+
+
+
+
+(defn create-resource
+  [...]
+  (let [resource (...)]
+    {:process (fn [arg] (.process resource arg))
+     :close (fn [] (.close resource))
+     ...}))
+
+
+
+
+
+
+
+
+
