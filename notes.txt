@@ -122,27 +122,46 @@ user> (this-is-oo "a")
 
 
 
-(defn create-resource
+(defn create-connection
   [...]
   (let [resource (...)]
     (fn [arg]
       (condp =
         :close (.close resource)
         ...
-        (.process resource arg)))))
+        (.send resource arg)))))
+
+(defn close
+  [conn]
+  (conn :close))
+
+(...
+  (let [c (create-connection ...)]
+    (c "my data")
+    (close c))
 
 
 
 
-(defn create-resource
+(defn create-connection
   [...]
   (let [resource (...)]
-    {:process (fn [arg] (.process resource arg))
+    {:send (fn [arg] (.send resource arg))
      :close (fn [] (.close resource))
      ...}))
 
+(defn send
+  [conn arg]
+  ((conn :send) arg))
 
+(defn close
+  [conn]
+  ((conn :close)))
 
+(...
+  (let [c (create-connection ...)]
+    (send c "my data")
+    (close c))
 
 
 
