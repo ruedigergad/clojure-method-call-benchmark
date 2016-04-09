@@ -271,7 +271,7 @@
         m {:bar (fn [arg] (+ res arg))}]
     (cc/with-progress-reporting
       (cc/quick-bench
-        ((m :bar) "bar")
+        ((m :bar) 2)
         :verbose))))
 
 (deftest map-benchmark-1
