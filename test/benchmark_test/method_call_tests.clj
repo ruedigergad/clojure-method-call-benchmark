@@ -2,8 +2,42 @@
   (:require [clojure.test :refer :all]
             [criterium [core :as cc]]))
 
-(deftest fn-baseline-0
-  (println "\nRunning: fn-baseline-0")
+(deftest baseline-0
+  (println "\nRunning: baseline-0")
+  (cc/with-progress-reporting
+    (cc/quick-bench
+      (str "foo" "bar")
+      :verbose)))
+
+(deftest baseline-1
+  (println "\nRunning: baseline-1")
+  (let [f (fn []
+            (str "foo"))]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (f)
+        :verbose))))
+
+(deftest baseline-2
+  (println "\nRunning: baseline-2")
+  (let [f (fn [arg]
+            (str arg))]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (f "bar")
+        :verbose))))
+
+(deftest baseline-3
+  (println "\nRunning: baseline-3")
+  (let [f (fn [arg]
+            (str "foo" arg))]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (f "bar")
+        :verbose))))
+
+(deftest baseline-4
+  (println "\nRunning: baseline-4")
   (let [res "foo"
         f (fn [arg]
             (str res arg))]
