@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 OUTPUT_NAME="$(date "+%Y-%m-%d_%H-%M")_$(hostname)_$(uname)"
 
