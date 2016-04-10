@@ -1,4 +1,6 @@
-(ns clojure-method-call-benchmark.core)
+(ns clojure-method-call-benchmark.core
+  (:import
+    (clojure.lang IFn)))
 
 (defn condp-obj-0
   [data]
@@ -308,4 +310,24 @@
    :foo_38 38
    :foo_39 39
    :bar (fn [arg] (+ data arg))})
+
+(defprotocol MyProt
+  (foo [_])
+  (bar [_ arg]))
+
+(defrecord MyRec
+  [res]
+  MyProt
+    (foo [_] 0)
+    (bar [_ arg] (+ res arg))
+  IFn
+    (invoke [this arg] (bar this arg)))
+
+(deftype MyType
+  [res]
+  MyProt
+    (foo [_] 0)
+    (bar [_ arg] (+ res arg))
+  IFn
+    (invoke [this arg] (bar this arg)))
 

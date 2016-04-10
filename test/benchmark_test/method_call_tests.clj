@@ -211,21 +211,9 @@
         ((:bar o) 2)
         :verbose))))
 
-(defprotocol MyProt
-  (foo [_])
-  (bar [_ arg]))
-
-(defrecord MyRec
-  [res]
-  MyProt
-    (foo [_] 0)
-    (bar [_ arg] (+ res arg))
-  IFn
-    (invoke [this arg] (.bar this arg)))
-
 (deftest defrecord-benchmark-0
   (println "\nRunning: defrecord-benchmark-0")
-  (let [r (MyRec. 1)]
+  (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (bar r 2)
@@ -233,23 +221,15 @@
 
 (deftest defrecord-benchmark-1
   (println "\nRunning: defrecord-benchmark-1")
-  (let [r (MyRec. 1)]
+  (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (r 2)
         :verbose))))
 
-(deftype MyType
-  [res]
-  MyProt
-    (foo [_] 0)
-    (bar [_ arg] (+ res arg))
-  IFn
-    (invoke [this arg] (.bar this arg)))
-
 (deftest deftype-benchmark-0
   (println "\nRunning: deftype-benchmark-0")
-  (let [t (MyType. 1)]
+  (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (bar t 2)
@@ -257,7 +237,7 @@
 
 (deftest deftype-benchmark-1
   (println "\nRunning: deftype-benchmark-1")
-  (let [t (MyType. 1)]
+  (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (t 2)

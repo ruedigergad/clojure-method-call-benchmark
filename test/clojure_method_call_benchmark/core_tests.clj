@@ -54,3 +54,19 @@
   (let [o (map-obj-5 100)]
     (is (= 101 ((o :bar) 1)))))
 
+(deftest type-object-0-test
+  (let [o (->MyType 100)]
+    (is (= 101 (bar o 1)))))
+
+(deftest type-object-1-test
+  (let [o (->MyType 100)]
+    (is (= 101 (o 1)))))
+
+(deftest record-object-0-test
+  (let [o (->MyRec 100)]
+    (is (= 101 (bar o 1)))))
+
+(deftest record-object-1-test
+  (let [o (->MyRec 100)]
+    (is (= 101 (o 1)))))
+
