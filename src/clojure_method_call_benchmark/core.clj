@@ -331,3 +331,19 @@
   IFn
     (invoke [this arg] (bar this arg)))
 
+(defrecord MyRec2
+  [res]
+  MyProt
+    (foo [_] 0)
+    (bar [_ arg] (+ res arg))
+  IFn
+    (invoke [this arg] (.bar this arg)))
+
+(deftype MyType2
+  [res]
+  MyProt
+    (foo [_] 0)
+    (bar [_ arg] (+ res arg))
+  IFn
+    (invoke [this arg] (.bar this arg)))
+

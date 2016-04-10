@@ -208,7 +208,7 @@
       (cc/quick-bench
         ((:bar o) 2)
         :verbose))))
-
+;
 (deftest defrecord-0
   (println "\nBenchmarking: defrecord-0")
   (let [r (->MyRec 1)]
@@ -225,6 +225,14 @@
         (r 2)
         :verbose))))
 
+(deftest defrecord-2
+  (println "\nBenchmarking: defrecord-2")
+  (let [r (->MyRec2 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (r 2)
+        :verbose))))
+
 (deftest deftype-0
   (println "\nBenchmarking: deftype-0")
   (let [t (->MyType 1)]
@@ -236,6 +244,14 @@
 (deftest deftype-1
   (println "\nBenchmarking: deftype-1")
   (let [t (->MyType 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (t 2)
+        :verbose))))
+
+(deftest deftype-2
+  (println "\nBenchmarking: deftype-2")
+  (let [t (->MyType2 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (t 2)
