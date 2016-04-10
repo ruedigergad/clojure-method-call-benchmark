@@ -647,7 +647,7 @@
   (let [r (MyRec. 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
-        (.bar r 2)
+        (bar r 2)
         :verbose))))
 
 (deftest defrecord-benchmark-1
@@ -671,7 +671,7 @@
   (let [t (MyType. 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
-        (.bar t 2)
+        (bar t 2)
         :verbose))))
 
 (deftest deftype-benchmark-1
