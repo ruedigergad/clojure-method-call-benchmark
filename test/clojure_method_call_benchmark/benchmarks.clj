@@ -210,7 +210,7 @@
         :verbose))))
 
 (deftest record-fn
-  (println "\nBenchmarking: record-fn")
+  (println "\nBenchmarking: record-0-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -218,7 +218,7 @@
         :verbose))))
 
 (deftest record-method
-  (println "\nBenchmarking: record-method")
+  (println "\nBenchmarking: record-1-method")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -226,7 +226,7 @@
         :verbose))))
 
 (deftest record-self-fn
-  (println "\nBenchmarking: record-self-fn")
+  (println "\nBenchmarking: record-2-self-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -234,7 +234,7 @@
         :verbose))))
 
 (deftest record-self-method
-  (println "\nBenchmarking: record-self-method")
+  (println "\nBenchmarking: record-3-self-method")
   (let [r (->MyRec2 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -242,7 +242,7 @@
         :verbose))))
 
 (deftest record-ext-fn
-  (println "\nBenchmarking: record-ext-fn")
+  (println "\nBenchmarking: record-4-ext-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -250,7 +250,7 @@
         :verbose))))
 
 (deftest type-fn
-  (println "\nBenchmarking: type-fn")
+  (println "\nBenchmarking: type-0-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -258,7 +258,7 @@
         :verbose))))
 
 (deftest type-method
-  (println "\nBenchmarking: type-method")
+  (println "\nBenchmarking: type-1-method")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -266,7 +266,7 @@
         :verbose))))
 
 (deftest type-self-fn
-  (println "\nBenchmarking: type-self-fn")
+  (println "\nBenchmarking: type-2-self-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -274,7 +274,7 @@
         :verbose))))
 
 (deftest type-self-method
-  (println "\nBenchmarking: type-self-method")
+  (println "\nBenchmarking: type-3-self-method")
   (let [t (->MyType2 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
@@ -282,7 +282,7 @@
         :verbose))))
 
 (deftest type-ext-fn
-  (println "\nBenchmarking: type-ext-fn")
+  (println "\nBenchmarking: type-4-ext-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
