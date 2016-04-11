@@ -208,13 +208,21 @@
       (cc/quick-bench
         ((:bar o) 2)
         :verbose))))
-;
+
 (deftest record-fn
   (println "\nBenchmarking: record-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
         (bar r 2)
+        :verbose))))
+
+(deftest record-method
+  (println "\nBenchmarking: record-method")
+  (let [r (->MyRec 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (.bar r 2)
         :verbose))))
 
 (deftest record-self-fn
@@ -235,6 +243,14 @@
 
 (deftest type-fn
   (println "\nBenchmarking: type-fn")
+  (let [t (->MyType 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (bar t 2)
+        :verbose))))
+
+(deftest type-method
+  (println "\nBenchmarking: type-method")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
