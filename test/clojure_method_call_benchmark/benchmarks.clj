@@ -262,7 +262,7 @@
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
       (cc/quick-bench
-        (bar t 2)
+        (.bar t 2)
         :verbose))))
 
 (deftest type-self-fn
