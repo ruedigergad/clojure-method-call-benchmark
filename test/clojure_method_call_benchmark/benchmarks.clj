@@ -241,6 +241,14 @@
         (r 2)
         :verbose))))
 
+(deftest record-ext-fn
+  (println "\nBenchmarking: record-ext-fn")
+  (let [r (->MyRec 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (foobar r 2)
+        :verbose))))
+
 (deftest type-fn
   (println "\nBenchmarking: type-fn")
   (let [t (->MyType 1)]
@@ -271,5 +279,13 @@
     (cc/with-progress-reporting
       (cc/quick-bench
         (t 2)
+        :verbose))))
+
+(deftest type-ext-fn
+  (println "\nBenchmarking: type-ext-fn")
+  (let [t (->MyType 1)]
+    (cc/with-progress-reporting
+      (cc/quick-bench
+        (foobar t 2)
         :verbose))))
 

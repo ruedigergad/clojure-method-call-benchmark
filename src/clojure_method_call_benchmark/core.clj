@@ -347,3 +347,12 @@
   IFn
     (invoke [this arg] (.bar this arg)))
 
+(defprotocol MyProt2
+  (foobar [_ arg]))
+
+(extend-protocol MyProt2
+  MyType
+    (foobar [this arg] (+ (.data this) arg))
+  MyRec
+    (foobar [this arg] (+ (.data this) arg)))
+
