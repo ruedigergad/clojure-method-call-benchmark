@@ -316,34 +316,34 @@
   (bar [_ arg]))
 
 (defrecord MyRec
-  [res]
+  [data]
   MyProt
     (foo [_] 0)
-    (bar [_ arg] (+ res arg))
+    (bar [_ arg] (+ data arg))
   IFn
     (invoke [this arg] (bar this arg)))
 
 (deftype MyType
-  [res]
+  [data]
   MyProt
     (foo [_] 0)
-    (bar [_ arg] (+ res arg))
+    (bar [_ arg] (+ data arg))
   IFn
     (invoke [this arg] (bar this arg)))
 
 (defrecord MyRec2
-  [res]
+  [data]
   MyProt
     (foo [_] 0)
-    (bar [_ arg] (+ res arg))
+    (bar [_ arg] (+ data arg))
   IFn
     (invoke [this arg] (.bar this arg)))
 
 (deftype MyType2
-  [res]
+  [data]
   MyProt
     (foo [_] 0)
-    (bar [_ arg] (+ res arg))
+    (bar [_ arg] (+ data arg))
   IFn
     (invoke [this arg] (.bar this arg)))
 
