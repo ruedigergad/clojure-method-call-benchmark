@@ -15,7 +15,7 @@
       :foo_0 0
       (+ data arg))))
 
-(defn condp-obj-2
+(defn condp-obj-10
   [data]
   (fn [arg]
     (condp = arg
@@ -31,7 +31,7 @@
       :foo_9 9
       (+ data arg))))
 
-(defn condp-obj-3
+(defn condp-obj-20
   [data]
   (fn [arg]
     (condp = arg
@@ -57,7 +57,7 @@
       :foo_19 19
       (+ data arg))))
 
-(defn condp-obj-4
+(defn condp-obj-30
   [data]
   (fn [arg]
     (condp = arg
@@ -93,7 +93,7 @@
       :foo_29 29
       (+ data arg))))
 
-(defn condp-obj-5
+(defn condp-obj-40
   [data]
   (fn [arg]
     (condp = arg
@@ -139,7 +139,7 @@
       :foo_39 39
       (+ data arg))))
 
-(defn condp-if-obj-0
+(defn condp-if-obj-40
   [data]
   (fn [arg]
     (if (not (keyword? arg))
@@ -195,7 +195,7 @@
   {:foo_0 0
    :bar (fn [arg] (+ data arg))})
 
-(defn map-obj-2
+(defn map-obj-10
   [data]
   {:foo_0 0
    :foo_1 1
@@ -209,7 +209,7 @@
    :foo_9 9
    :bar (fn [arg] (+ data arg))})
 
-(defn map-obj-3
+(defn map-obj-20
   [data]
   {:foo_0 0
    :foo_1 1
@@ -233,7 +233,7 @@
    :foo_19 19
    :bar (fn [arg] (+ data arg))})
 
-(defn map-obj-4
+(defn map-obj-30
   [data]
   {:foo_0 0
    :foo_1 1
@@ -267,7 +267,7 @@
    :foo_29 29
    :bar (fn [arg] (+ data arg))})
 
-(defn map-obj-5
+(defn map-obj-40
   [data]
   {:foo_0 0
    :foo_1 1

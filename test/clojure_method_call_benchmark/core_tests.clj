@@ -10,24 +10,24 @@
   (let [o (condp-obj-1 100)]
     (is (= 101 (o 1)))))
 
-(deftest condp-object-2-test
-  (let [o (condp-obj-2 100)]
+(deftest condp-object-10-test
+  (let [o (condp-obj-10 100)]
     (is (= 101 (o 1)))))
 
-(deftest condp-object-3-test
-  (let [o (condp-obj-3 100)]
+(deftest condp-object-20-test
+  (let [o (condp-obj-20 100)]
     (is (= 101 (o 1)))))
 
-(deftest condp-object-4-test
-  (let [o (condp-obj-4 100)]
+(deftest condp-object-30-test
+  (let [o (condp-obj-30 100)]
     (is (= 101 (o 1)))))
 
-(deftest condp-object-5-test
-  (let [o (condp-obj-5 100)]
+(deftest condp-object-40-test
+  (let [o (condp-obj-40 100)]
     (is (= 101 (o 1)))))
 
-(deftest condp-if-object-0-test
-  (let [o (condp-if-obj-0 100)]
+(deftest condp-if-object-40-test
+  (let [o (condp-if-obj-40 100)]
     (is (= 101 (o 1)))))
 
 (deftest map-object-0-test
@@ -38,20 +38,20 @@
   (let [o (map-obj-1 100)]
     (is (= 101 ((o :bar) 1)))))
 
-(deftest map-object-2-test
-  (let [o (map-obj-2 100)]
+(deftest map-object-10-test
+  (let [o (map-obj-10 100)]
     (is (= 101 ((o :bar) 1)))))
 
-(deftest map-object-3-test
-  (let [o (map-obj-3 100)]
+(deftest map-object-20-test
+  (let [o (map-obj-20 100)]
     (is (= 101 ((o :bar) 1)))))
 
-(deftest map-object-4-test
-  (let [o (map-obj-4 100)]
+(deftest map-object-30-test
+  (let [o (map-obj-30 100)]
     (is (= 101 ((o :bar) 1)))))
 
-(deftest map-object-5-test
-  (let [o (map-obj-5 100)]
+(deftest map-object-40-test
+  (let [o (map-obj-40 100)]
     (is (= 101 ((o :bar) 1)))))
 
 (deftest type-object-0-test
