@@ -1,0 +1,920 @@
+
+lein test clojure-method-call-benchmark.benchmarks
+
+Benchmarking: map-rev-20
+Estimating sampling overhead
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 5401422 iterations
+  compilation occurred before 20950642 iterations
+  compilation occurred before 21114318 iterations
+  compilation occurred before 41737494 iterations
+  compilation occurred before 62196994 iterations
+  compilation occurred before 62688022 iterations
+  compilation occurred before 83638550 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 1079943 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 490101060 in 60 samples of 8168351 calls.
+      Execution time sample mean : 108.163807 ns
+             Execution time mean : 108.163998 ns
+Execution time sample std-deviation : 0.062714 ns
+    Execution time std-deviation : 0.063911 ns
+   Execution time lower quantile : 108.068556 ns ( 2.5%)
+   Execution time upper quantile : 108.308912 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 2 outliers in 60 samples (3.3333 %)
+	low-severe	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: condp-40
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 117384 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 21758700 in 60 samples of 362645 calls.
+      Execution time sample mean : 2.751061 µs
+             Execution time mean : 2.751060 µs
+Execution time sample std-deviation : 0.921171 ns
+    Execution time std-deviation : 0.930357 ns
+   Execution time lower quantile : 2.749427 µs ( 2.5%)
+   Execution time upper quantile : 2.753303 µs (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 3 (5.0000 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: baseline-2-fn-arg
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 3077936460 in 60 samples of 51298941 calls.
+      Execution time sample mean : 4.903091 ns
+             Execution time mean : 4.903116 ns
+Execution time sample std-deviation : 0.009703 ns
+    Execution time std-deviation : 0.009839 ns
+   Execution time lower quantile : 4.888323 ns ( 2.5%)
+   Execution time upper quantile : 4.925210 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Benchmarking: condp-1
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2751183 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 508941720 in 60 samples of 8482362 calls.
+      Execution time sample mean : 103.331131 ns
+             Execution time mean : 103.331544 ns
+Execution time sample std-deviation : 0.053677 ns
+    Execution time std-deviation : 0.055175 ns
+   Execution time lower quantile : 103.260070 ns ( 2.5%)
+   Execution time upper quantile : 103.448373 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 6 outliers in 60 samples (10.0000 %)
+	low-severe	 4 (6.6667 %)
+	low-mild	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-10
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 522585120 in 60 samples of 8709752 calls.
+      Execution time sample mean : 100.116082 ns
+             Execution time mean : 100.117605 ns
+Execution time sample std-deviation : 0.187520 ns
+    Execution time std-deviation : 0.187642 ns
+   Execution time lower quantile : 100.047160 ns ( 2.5%)
+   Execution time upper quantile : 100.191599 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 2 (3.3333 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: record-2-self-fn
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2399931 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 542227260 in 60 samples of 9037121 calls.
+      Execution time sample mean : 96.077321 ns
+             Execution time mean : 96.077436 ns
+Execution time sample std-deviation : 0.044786 ns
+    Execution time std-deviation : 0.045244 ns
+   Execution time lower quantile : 96.002775 ns ( 2.5%)
+   Execution time upper quantile : 96.184141 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 2 outliers in 60 samples (3.3333 %)
+	low-severe	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: record-3-self-method
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1234234800 in 60 samples of 20570580 calls.
+      Execution time sample mean : 34.030289 ns
+             Execution time mean : 34.030411 ns
+Execution time sample std-deviation : 0.026807 ns
+    Execution time std-deviation : 0.027245 ns
+   Execution time lower quantile : 33.979361 ns ( 2.5%)
+   Execution time upper quantile : 34.079977 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Benchmarking: map-1
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 971644620 in 60 samples of 16194077 calls.
+      Execution time sample mean : 47.155611 ns
+             Execution time mean : 47.155705 ns
+Execution time sample std-deviation : 0.050600 ns
+    Execution time std-deviation : 0.051634 ns
+   Execution time lower quantile : 47.048454 ns ( 2.5%)
+   Execution time upper quantile : 47.264864 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Benchmarking: map-0
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2674239 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 990685980 in 60 samples of 16511433 calls.
+      Execution time sample mean : 45.919881 ns
+             Execution time mean : 45.919866 ns
+Execution time sample std-deviation : 0.024970 ns
+    Execution time std-deviation : 0.025424 ns
+   Execution time lower quantile : 45.886932 ns ( 2.5%)
+   Execution time upper quantile : 45.992068 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 5 outliers in 60 samples (8.3333 %)
+	low-severe	 2 (3.3333 %)
+	low-mild	 3 (5.0000 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: baseline-0-add
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 9263864 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 3144699120 in 60 samples of 52411652 calls.
+      Execution time sample mean : 4.456798 ns
+             Execution time mean : 4.456871 ns
+Execution time sample std-deviation : 0.007173 ns
+    Execution time std-deviation : 0.007302 ns
+   Execution time lower quantile : 4.445082 ns ( 2.5%)
+   Execution time upper quantile : 4.473825 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: condp-0
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 110 iterations
+  compilation occurred before 4637735 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1219484100 in 60 samples of 20324735 calls.
+      Execution time sample mean : 34.588780 ns
+             Execution time mean : 34.588907 ns
+Execution time sample std-deviation : 0.023483 ns
+    Execution time std-deviation : 0.024199 ns
+   Execution time lower quantile : 34.559047 ns ( 2.5%)
+   Execution time upper quantile : 34.639369 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-rev-30
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2653264 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 528518520 in 60 samples of 8808642 calls.
+      Execution time sample mean : 98.969435 ns
+             Execution time mean : 98.969930 ns
+Execution time sample std-deviation : 0.061124 ns
+    Execution time std-deviation : 0.062011 ns
+   Execution time lower quantile : 98.871692 ns ( 2.5%)
+   Execution time upper quantile : 99.115987 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-20
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 534916860 in 60 samples of 8915281 calls.
+      Execution time sample mean : 97.646291 ns
+             Execution time mean : 97.645964 ns
+Execution time sample std-deviation : 0.054928 ns
+    Execution time std-deviation : 0.055747 ns
+   Execution time lower quantile : 97.561399 ns ( 2.5%)
+   Execution time upper quantile : 97.754665 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 1 (1.6667 %)
+	low-mild	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: type-4-ext-fn
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 392031 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1045973820 in 60 samples of 17432897 calls.
+      Execution time sample mean : 43.719123 ns
+             Execution time mean : 43.719184 ns
+Execution time sample std-deviation : 0.021300 ns
+    Execution time std-deviation : 0.021638 ns
+   Execution time lower quantile : 43.683667 ns ( 2.5%)
+   Execution time upper quantile : 43.760462 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: type-0-fn
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1237141800 in 60 samples of 20619030 calls.
+      Execution time sample mean : 33.846221 ns
+             Execution time mean : 33.846125 ns
+Execution time sample std-deviation : 0.021339 ns
+    Execution time std-deviation : 0.021558 ns
+   Execution time lower quantile : 33.817050 ns ( 2.5%)
+   Execution time upper quantile : 33.900280 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 3 (5.0000 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: record-4-ext-fn
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 618106 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1006367100 in 60 samples of 16772785 calls.
+      Execution time sample mean : 48.016926 ns
+             Execution time mean : 48.017022 ns
+Execution time sample std-deviation : 0.025600 ns
+    Execution time std-deviation : 0.026024 ns
+   Execution time lower quantile : 47.984353 ns ( 2.5%)
+   Execution time upper quantile : 48.094551 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 5 outliers in 60 samples (8.3333 %)
+	low-severe	 3 (5.0000 %)
+	low-mild	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: type-3-self-method
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1262219640 in 60 samples of 21036994 calls.
+      Execution time sample mean : 32.941257 ns
+             Execution time mean : 32.941218 ns
+Execution time sample std-deviation : 0.025945 ns
+    Execution time std-deviation : 0.026245 ns
+   Execution time lower quantile : 32.894421 ns ( 2.5%)
+   Execution time upper quantile : 32.995622 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 5 outliers in 60 samples (8.3333 %)
+	low-severe	 4 (6.6667 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-cached-40
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 4731918 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1232207400 in 60 samples of 20536790 calls.
+      Execution time sample mean : 34.108356 ns
+             Execution time mean : 34.108221 ns
+Execution time sample std-deviation : 0.030096 ns
+    Execution time std-deviation : 0.030655 ns
+   Execution time lower quantile : 34.051524 ns ( 2.5%)
+   Execution time upper quantile : 34.167008 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: baseline-4-fn-add-closure
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1141094280 in 60 samples of 19018238 calls.
+      Execution time sample mean : 35.881571 ns
+             Execution time mean : 35.881854 ns
+Execution time sample std-deviation : 0.030615 ns
+    Execution time std-deviation : 0.031287 ns
+   Execution time lower quantile : 35.830436 ns ( 2.5%)
+   Execution time upper quantile : 35.941343 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: condp-10
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 1132085 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 82521360 in 60 samples of 1375356 calls.
+      Execution time sample mean : 708.937036 ns
+             Execution time mean : 708.937329 ns
+Execution time sample std-deviation : 0.182688 ns
+    Execution time std-deviation : 0.185290 ns
+   Execution time lower quantile : 708.603592 ns ( 2.5%)
+   Execution time upper quantile : 709.489252 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 5 outliers in 60 samples (8.3333 %)
+	low-severe	 2 (3.3333 %)
+	low-mild	 1 (1.6667 %)
+	high-mild	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-30
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 579305700 in 60 samples of 9655095 calls.
+      Execution time sample mean : 88.842487 ns
+             Execution time mean : 88.842555 ns
+Execution time sample std-deviation : 0.145129 ns
+    Execution time std-deviation : 0.147154 ns
+   Execution time lower quantile : 88.587467 ns ( 2.5%)
+   Execution time upper quantile : 89.134069 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: condp-30
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 471382 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 28878600 in 60 samples of 481310 calls.
+      Execution time sample mean : 2.056796 µs
+             Execution time mean : 2.056802 µs
+Execution time sample std-deviation : 0.602481 ns
+    Execution time std-deviation : 0.616032 ns
+   Execution time lower quantile : 2.055954 µs ( 2.5%)
+   Execution time upper quantile : 2.058586 µs (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 3 (5.0000 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-rev-40
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 3918916 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 522608820 in 60 samples of 8710147 calls.
+      Execution time sample mean : 100.126385 ns
+             Execution time mean : 100.126527 ns
+Execution time sample std-deviation : 0.045414 ns
+    Execution time std-deviation : 0.046280 ns
+   Execution time lower quantile : 100.049571 ns ( 2.5%)
+   Execution time upper quantile : 100.240014 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 1 (1.6667 %)
+	low-mild	 1 (1.6667 %)
+	high-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-40
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 571094580 in 60 samples of 9518243 calls.
+      Execution time sample mean : 91.185277 ns
+             Execution time mean : 91.188499 ns
+Execution time sample std-deviation : 0.298164 ns
+    Execution time std-deviation : 0.300019 ns
+   Execution time lower quantile : 91.052121 ns ( 2.5%)
+   Execution time upper quantile : 92.035020 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 9 outliers in 60 samples (15.0000 %)
+	low-severe	 4 (6.6667 %)
+	low-mild	 5 (8.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: baseline-1-fn-const
+Warming up for JIT optimisations 10000000000 ...
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 3081768720 in 60 samples of 51362812 calls.
+      Execution time sample mean : 5.309292 ns
+             Execution time mean : 5.308518 ns
+Execution time sample std-deviation : 0.175152 ns
+    Execution time std-deviation : 0.175869 ns
+   Execution time lower quantile : 4.861237 ns ( 2.5%)
+   Execution time upper quantile : 5.403214 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 8 outliers in 60 samples (13.3333 %)
+	low-severe	 8 (13.3333 %)
+ Variance from outliers : 20.5528 % Variance is moderately inflated by outliers
+
+Benchmarking: baseline-3-fn-add-arg
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 5257896 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1195087140 in 60 samples of 19918119 calls.
+      Execution time sample mean : 35.616512 ns
+             Execution time mean : 35.616608 ns
+Execution time sample std-deviation : 0.030150 ns
+    Execution time std-deviation : 0.030434 ns
+   Execution time lower quantile : 35.570453 ns ( 2.5%)
+   Execution time upper quantile : 35.679213 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: type-2-self-fn
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 4450327 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 579029100 in 60 samples of 9650485 calls.
+      Execution time sample mean : 87.620149 ns
+             Execution time mean : 87.620454 ns
+Execution time sample std-deviation : 0.043733 ns
+    Execution time std-deviation : 0.044051 ns
+   Execution time lower quantile : 87.547827 ns ( 2.5%)
+   Execution time upper quantile : 87.708867 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 2 outliers in 60 samples (3.3333 %)
+	low-severe	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-rev-0
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 3397010 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 910985460 in 60 samples of 15183091 calls.
+      Execution time sample mean : 51.464804 ns
+             Execution time mean : 51.464995 ns
+Execution time sample std-deviation : 0.028400 ns
+    Execution time std-deviation : 0.029323 ns
+   Execution time lower quantile : 51.424349 ns ( 2.5%)
+   Execution time upper quantile : 51.542332 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 3 (5.0000 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: type-1-method
+Warming up for JIT optimisations 10000000000 ...
+  classes loaded before 181320 iterations
+  compilation occurred before 181320 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 20808360 in 60 samples of 346806 calls.
+      Execution time sample mean : 2.876006 µs
+             Execution time mean : 2.875981 µs
+Execution time sample std-deviation : 5.615893 ns
+    Execution time std-deviation : 5.654359 ns
+   Execution time lower quantile : 2.864546 µs ( 2.5%)
+   Execution time upper quantile : 2.884643 µs (97.5%)
+                   Overhead used : 14.608237 ns
+
+Benchmarking: condp-20
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 614224 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 42870720 in 60 samples of 714512 calls.
+      Execution time sample mean : 1.385482 µs
+             Execution time mean : 1.385484 µs
+Execution time sample std-deviation : 0.307344 ns
+    Execution time std-deviation : 0.316318 ns
+   Execution time lower quantile : 1.384995 µs ( 2.5%)
+   Execution time upper quantile : 1.386338 µs (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 1 (1.6667 %)
+	low-mild	 1 (1.6667 %)
+	high-mild	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: condp-if-40
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2455590 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 997433520 in 60 samples of 16623892 calls.
+      Execution time sample mean : 45.520802 ns
+             Execution time mean : 45.520887 ns
+Execution time sample std-deviation : 0.039462 ns
+    Execution time std-deviation : 0.039898 ns
+   Execution time lower quantile : 45.458469 ns ( 2.5%)
+   Execution time upper quantile : 45.591756 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Benchmarking: map-rev-10
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 2944419 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 486856860 in 60 samples of 8114281 calls.
+      Execution time sample mean : 108.758331 ns
+             Execution time mean : 108.758698 ns
+Execution time sample std-deviation : 0.054193 ns
+    Execution time std-deviation : 0.055316 ns
+   Execution time lower quantile : 108.695079 ns ( 2.5%)
+   Execution time upper quantile : 108.923143 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 4 (6.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: map-rev-1
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 3123477 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 838234800 in 60 samples of 13970580 calls.
+      Execution time sample mean : 57.056386 ns
+             Execution time mean : 57.056550 ns
+Execution time sample std-deviation : 0.030070 ns
+    Execution time std-deviation : 0.030877 ns
+   Execution time lower quantile : 57.019648 ns ( 2.5%)
+   Execution time upper quantile : 57.123369 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 2 outliers in 60 samples (3.3333 %)
+	low-severe	 1 (1.6667 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: record-1-method
+Warming up for JIT optimisations 10000000000 ...
+  classes loaded before 140596 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 13683120 in 60 samples of 228052 calls.
+      Execution time sample mean : 4.389387 µs
+             Execution time mean : 4.389369 µs
+Execution time sample std-deviation : 12.338077 ns
+    Execution time std-deviation : 12.482135 ns
+   Execution time lower quantile : 4.360955 µs ( 2.5%)
+   Execution time upper quantile : 4.409439 µs (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 2 (3.3333 %)
+	low-mild	 1 (1.6667 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Benchmarking: record-0-fn
+Warming up for JIT optimisations 10000000000 ...
+  compilation occurred before 5822509 iterations
+Estimating execution count ...
+Sampling ...
+Final GC...
+Checking GC...
+Finding outliers ...
+Bootstrapping ...
+Checking outlier significance
+amd64 FreeBSD 10.3-RELEASE 4 cpu(s)
+OpenJDK 64-Bit Server VM 24.95-b01
+Runtime arguments: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/usr/home/rc/repositories/private/clojure/clojure-method-call-benchmark/target/classes -Dclojure-method-call-benchmark.version=0.1.0-SNAPSHOT -Dclojure.debug=false
+Evaluation count : 1243426620 in 60 samples of 20723777 calls.
+      Execution time sample mean : 33.738383 ns
+             Execution time mean : 33.738493 ns
+Execution time sample std-deviation : 0.022924 ns
+    Execution time std-deviation : 0.023208 ns
+   Execution time lower quantile : 33.705845 ns ( 2.5%)
+   Execution time upper quantile : 33.789326 ns (97.5%)
+                   Overhead used : 14.608237 ns
+
+Found 2 outliers in 60 samples (3.3333 %)
+	low-severe	 2 (3.3333 %)
+ Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
+
+Ran 35 tests containing 0 assertions.
+0 failures, 0 errors.
