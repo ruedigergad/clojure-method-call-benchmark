@@ -1,12 +1,13 @@
 set term pdf size 6, 5
-set output "plot.pdf"
+set output prefix . "_1.pdf"
 set xlabel "Scenario"
 set ylabel "Execution Time [ns]"
 set xtics rotate
 set logscale y
 set grid
 set nokey
+input = prefix . ".txt"
 plot [-0.5:34.5]\
-  "2016-04-12_20-55_colin_FreeBSD_out.txt" using 3:xtic(1) with points lw 2.5 pt 1 ps 1.5 lc "black" notitle,\
-  "2016-04-12_20-55_colin_FreeBSD_out.txt" using 3:4 with errorbars lw 2.5 pt 1 ps 1.5 lc "black" notitle,\
+  input using 3:xtic(1) with points lw 2.5 pt 1 ps 1.5 lc "black" notitle,\
+  input using 3:4 with errorbars lw 2.5 pt 1 ps 1.5 lc "black" notitle,\
 

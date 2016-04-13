@@ -1,0 +1,12 @@
+set term pdf size 6, 5
+set output prefix . "_2.pdf"
+set xlabel "Scenario"
+set ylabel "Rel. Exec. Time [result_x/baseline-4]"
+set xtics rotate
+set grid
+set nokey
+set yrange [0:5]
+input = prefix . ".txt"
+plot [-0.5:34.5]\
+  input using 5:xtic(1) with points lw 2.5 pt 1 ps 1.5 lc "black" notitle,\
+
