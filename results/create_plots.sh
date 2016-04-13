@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Example usage:
+# ./create_plots.sh 2016-04-12_20-55_colin_FreeBSD_out
+
 gnuplot -e "prefix='"$1"'" plot_1.gpl
 gnuplot -e "prefix='"$1"'" plot_2.gpl
 
