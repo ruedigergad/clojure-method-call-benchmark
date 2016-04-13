@@ -1,4 +1,4 @@
-# benchmark-test
+# clojure-method-call-benchmark
 
 Please see the following blog post for more details: https://ruedigergad.com/2016/04/13/performance-of-method-calls-on-clojure-objects/
 
