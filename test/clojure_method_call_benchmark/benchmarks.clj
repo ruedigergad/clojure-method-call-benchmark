@@ -7,7 +7,7 @@
 (deftest baseline-0-add
   (println "\nBenchmarking: baseline-0-add")
   (cc/with-progress-reporting
-    (cc/quick-bench
+    (cc/bench
       (+ 1 2)
       :verbose)))
 
@@ -16,7 +16,7 @@
   (let [f (fn []
             2)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (f)
         :verbose))))
 
@@ -25,7 +25,7 @@
   (let [f (fn [arg]
             arg)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (f 2)
         :verbose))))
 
@@ -34,7 +34,7 @@
   (let [f (fn [arg]
             (+ 1 arg))]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (f 2)
         :verbose))))
 
@@ -44,7 +44,7 @@
         f (fn [arg]
             (+ data arg))]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (f 2)
         :verbose))))
 
@@ -52,7 +52,7 @@
   (println "\nBenchmarking: condp-0")
   (let [o (condp-obj-0 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -60,7 +60,7 @@
   (println "\nBenchmarking: condp-1")
   (let [o (condp-obj-1 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -68,7 +68,7 @@
   (println "\nBenchmarking: condp-10")
   (let [o (condp-obj-10 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -76,7 +76,7 @@
   (println "\nBenchmarking: condp-20")
   (let [o (condp-obj-20 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -84,7 +84,7 @@
 (println "\nBenchmarking: condp-30")
 (let [o (condp-obj-30 1)]
   (cc/with-progress-reporting
-    (cc/quick-bench
+    (cc/bench
       (o 2)
       :verbose))))
 
@@ -92,7 +92,7 @@
   (println "\nBenchmarking: condp-40")
   (let [o (condp-obj-40 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -100,7 +100,7 @@
   (println "\nBenchmarking: condp-if-40")
   (let [o (condp-if-obj-40 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (o 2)
         :verbose))))
 
@@ -108,7 +108,7 @@
   (println "\nBenchmarking: map-0")
   (let [o (map-obj-0 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -116,7 +116,7 @@
   (println "\nBenchmarking: map-1")
   (let [o (map-obj-1 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -124,7 +124,7 @@
   (println "\nBenchmarking: map-10")
   (let [o (map-obj-10 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -132,7 +132,7 @@
   (println "\nBenchmarking: map-20")
   (let [o (map-obj-20 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -140,7 +140,7 @@
   (println "\nBenchmarking: map-30")
   (let [o (map-obj-30 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -148,7 +148,7 @@
   (println "\nBenchmarking: map-40")
   (let [o (map-obj-40 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((o :bar) 2)
         :verbose))))
 
@@ -157,7 +157,7 @@
   (let [o (map-obj-40 1)
         f (o :bar)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (f 2)
         :verbose))))
 
@@ -165,7 +165,7 @@
   (println "\nBenchmarking: map-rev-0")
   (let [o (map-obj-0 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -173,7 +173,7 @@
   (println "\nBenchmarking: map-rev-1")
   (let [o (map-obj-1 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -181,7 +181,7 @@
   (println "\nBenchmarking: map-rev-10")
   (let [o (map-obj-10 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -189,7 +189,7 @@
   (println "\nBenchmarking: map-rev-20")
   (let [o (map-obj-20 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -197,7 +197,7 @@
   (println "\nBenchmarking: map-rev-30")
   (let [o (map-obj-30 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -205,7 +205,7 @@
   (println "\nBenchmarking: map-rev-40")
   (let [o (map-obj-40 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         ((:bar o) 2)
         :verbose))))
 
@@ -213,7 +213,7 @@
   (println "\nBenchmarking: record-0-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (bar r 2)
         :verbose))))
 
@@ -221,7 +221,7 @@
   (println "\nBenchmarking: record-1-method")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (.bar r 2)
         :verbose))))
 
@@ -229,7 +229,7 @@
   (println "\nBenchmarking: record-2-self-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (r 2)
         :verbose))))
 
@@ -237,7 +237,7 @@
   (println "\nBenchmarking: record-3-self-method")
   (let [r (->MyRec2 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (r 2)
         :verbose))))
 
@@ -245,7 +245,7 @@
   (println "\nBenchmarking: record-4-ext-fn")
   (let [r (->MyRec 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (foobar r 2)
         :verbose))))
 
@@ -253,7 +253,7 @@
   (println "\nBenchmarking: type-0-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (bar t 2)
         :verbose))))
 
@@ -261,7 +261,7 @@
   (println "\nBenchmarking: type-1-method")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (.bar t 2)
         :verbose))))
 
@@ -269,7 +269,7 @@
   (println "\nBenchmarking: type-2-self-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (t 2)
         :verbose))))
 
@@ -277,7 +277,7 @@
   (println "\nBenchmarking: type-3-self-method")
   (let [t (->MyType2 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (t 2)
         :verbose))))
 
@@ -285,7 +285,7 @@
   (println "\nBenchmarking: type-4-ext-fn")
   (let [t (->MyType 1)]
     (cc/with-progress-reporting
-      (cc/quick-bench
+      (cc/bench
         (foobar t 2)
         :verbose))))
 
